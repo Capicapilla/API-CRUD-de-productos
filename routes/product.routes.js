@@ -7,5 +7,7 @@ router.get('/', productCtrl.getProducts);
 router.get('/:id', productCtrl.getProductById);
 router.patch('/:id', productCtrl.updateProduct);
 router.delete('/:id', productCtrl.deleteProduct);
+router.post('/:id/reviews', productCtrl.addReview);
+
 
 module.exports = router;

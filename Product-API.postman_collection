@@ -65,6 +65,37 @@
 				"header": []
 			},
 			"response": []
+		},
+		{
+			"name": "Post-Reviews",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"usuario\": \"Juan\",\n  \"comentario\": \"Excelente producto\",\n  \"rating\": 5\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/products/68848f5d4abfe412d848e8c8/reviews",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"products",
+						"68848f5d4abfe412d848e8c8",
+						"reviews"
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }
