@@ -12,7 +12,7 @@ const productSchema = new mongoose.Schema({
   fecha_creacion: { type: Date, default: Date.now },
   stock: { type: Number, required: true, min: 0 },
 
-  // Julio pide: comentarios
+  // Julio pide: comentarios/reviews
 
   reviews: [
     {
@@ -31,7 +31,7 @@ productSchema.methods.toJSON = function () {
   delete obj._id;
   delete obj.__v;
 
-  //precios hablados en clase cambiar cnts a €
+  //precios hablados en clase cambiar cnts a €, fórmula
 
   obj.precio = obj.precio.toFixed(2);
   obj.currentCost = (obj.precio * (1 - obj.descuento / 100)).toFixed(2);
